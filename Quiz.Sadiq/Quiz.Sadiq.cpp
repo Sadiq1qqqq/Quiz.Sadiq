@@ -18,7 +18,7 @@ void readInput(char arr[], int maxLength) {
 
 void createQuiz() {
     if (qCount >= 100) {
-        cout << "Sual limitinə çatılıb!" << endl;
+        cout << "Sual limitine çatilib!" << endl;
         return;
     }
 
@@ -26,7 +26,7 @@ void createQuiz() {
     cout << "Yeni sual daxil edin: ";
     readInput(questions[qCount], 256);
 
-    cout << "Cavabı daxil edin: ";
+    cout << "Cavabi daxil edin: ";
     readInput(answers[qCount], 256);
 
     qCount++;
@@ -35,7 +35,7 @@ void createQuiz() {
 
 void viewQuiz() {
     if (qCount == 0) {
-        cout << "Heç bir quiz yoxdur!" << endl;
+        cout << "Hec bir quiz yoxdur!" << endl;
         return;
     }
 
@@ -47,7 +47,7 @@ void viewQuiz() {
 
 void editQuiz() {
     if (qCount == 0) {
-        cout << "Heç bir quiz yoxdur!" << endl;
+        cout << "Hec bir quiz yoxdur!" << endl;
         return;
     }
 
@@ -55,7 +55,7 @@ void editQuiz() {
     viewQuiz();
 
     int idx;
-    cout << "Düzəltmək istədiyiniz sualın nömrəsini daxil edin: ";
+    cout << "Duzeltmek istediyiniz sualın nömresini daxil edin: ";
     cin >> idx;
     getchar();
     if (idx > 0 && idx <= qCount) {
@@ -65,13 +65,13 @@ void editQuiz() {
         readInput(answers[idx - 1], 256);
     }
     else {
-        cout << "Yanlış nömrə!" << endl;
+        cout << "Yanlıs nomre!" << endl;
     }
 }
 
 void deleteQuiz() {
     if (qCount == 0) {
-        cout << "Heç bir quiz yoxdur!" << endl;
+        cout << "Hec bir quiz yoxdur!" << endl;
         return;
     }
 
@@ -79,7 +79,7 @@ void deleteQuiz() {
 
     
     int idx;
-    cout << "Silmək istədiyiniz sualın nömrəsini daxil edin: ";
+    cout << "Silmek istediyiniz sualin nomresini daxil edin: ";
     cin >> idx;
     getchar();
     if (idx > 0 && idx <= qCount) {
@@ -93,7 +93,7 @@ void deleteQuiz() {
         cout << "Sual silindi!" << endl;
     }
     else {
-        cout << "Yanlış nömrə!" << endl;
+        cout << "Yanlıs nomre!" << endl;
     }
 }
 
@@ -101,7 +101,7 @@ void deleteQuiz() {
 
 void guestQuiz() {
     if (qCount == 0) {
-        cout << "Heç bir quiz yoxdur!" << endl;
+        cout << "Hec bir quiz yoxdur!" << endl;
         return;
     }
 
@@ -112,12 +112,12 @@ void guestQuiz() {
 
 
     int idx;
-    cout << "Cavablandırmaq istədiyiniz sualın nömrəsini daxil edin: ";
+    cout << "Cavablandirmaq istediyiniz sualın nomresini daxil edin: ";
     cin >> idx;
     getchar();
     if (idx > 0 && idx <= qCount) {
         char userAnswer[256];
-        cout << "Cavabınızı daxil edin: ";
+        cout << "Cavabinizi daxil edin: ";
         readInput(userAnswer, 256);
 
 
@@ -131,14 +131,14 @@ void guestQuiz() {
         }
 
         if (correct) {
-            cout << "Cavabınız düzgündür!" << endl;
+            cout << "Cavabiniz duzgundur!" << endl;
         }
         else {
-            cout << "Cavabınız səhvdir. Doğru cavab: " << answers[idx - 1] << endl;
+            cout << "Cavabiniz sehvdir. Dogru cavab: " << answers[idx - 1] << endl;
         }
     }
     else {
-        cout << "Yanlış nömrə!" << endl;
+        cout << "Yanlıs nomre!" << endl;
     }
 }
 
@@ -149,12 +149,12 @@ void adminMenu() {
     do {
         cout << "\nAdmin Menyusu:\n";
         cout << "1. Yeni quiz yarat\n";
-        cout << "2. Quizlərə bax\n";
-        cout << "3. Quiz düzəlt\n";
+        cout << "2. Quizlere bax\n";
+        cout << "3. Quiz duzəlt\n";
         cout << "4. Quiz sil\n";
         cout << "5. Qonaq roluna keç\n";
-        cout << "6. Çıxış\n";
-        cout << "Seçiminizi daxil edin: ";
+        cout << "6. Cıxıs\n";
+        cout << "Seciminizi daxil edin: ";
         cin >> choice;
         getchar();
 
@@ -172,13 +172,13 @@ void adminMenu() {
             deleteQuiz();
             break;
         case 5:
-            cout << "Qonaq roluna keçirsiniz..." << endl;
+            cout << "Qonaq roluna kecirsiniz..." << endl;
             return;
         case 6:
-            cout << "Çıxış edilir..." << endl;
+            cout << "Cıxıs edilir..." << endl;
             break;
         default:
-            cout << "Yanlış seçim!" << endl;
+            cout << "Yanlıs secim!" << endl;
         }
     } while (choice != 6);
 }
@@ -189,9 +189,9 @@ void guestMenu() {
     int choice;
     do {
         cout << "\nQonaq Menyusu:\n";
-        cout << "1. Quizləri cavablandır\n";
-        cout << "2. Çıxış\n";
-        cout << "Seçiminizi daxil edin: ";
+        cout << "1. Quizleri cavablandir\n";
+        cout << "2. Cıxıs\n";
+        cout << "Seciminizi daxil edin: ";
         cin >> choice;
         getchar();
 
@@ -200,21 +200,20 @@ void guestMenu() {
             guestQuiz();
             break;
         case 2:
-            cout << "Çıxış edilir..." << endl;
+            cout << "Cıxıs edilir..." << endl;
             break;
         default:
-            cout << "Yanlış seçim!" << endl;
+            cout << "Yanlıs secim!" << endl;
         }
     } while (choice != 2);
 }
 
 
-
-int main() {
+int main(){
     int role;
     cout << "1. Admin\n";
     cout << "2. Guest\n";
-    cout << "Seçiminizi daxil edin: ";
+    cout << "Seciminizi daxil edin: ";
     cin >> role;
     getchar();
 
@@ -225,7 +224,7 @@ int main() {
         guestMenu();
     }
     else {
-        cout << "Yanlış seçim!" << endl;
+        cout << "Yanlıs secim!" << endl;
     }
 
     return 0;
