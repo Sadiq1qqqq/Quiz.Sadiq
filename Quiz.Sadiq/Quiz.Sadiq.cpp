@@ -22,6 +22,7 @@ void createQuiz() {
         return;
     }
 
+
     cout << "Yeni sual daxil edin: ";
     readInput(questions[qCount], 256);
 
