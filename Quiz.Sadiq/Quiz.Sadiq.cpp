@@ -1,10 +1,10 @@
 ﻿#include <iostream>
 using namespace std;
 
+
 char questions[100][256];
 char answers[100][256];
 int qCount = 0;
-
 
 void readInput(char arr[], int maxLength) {
     int i = 0;
