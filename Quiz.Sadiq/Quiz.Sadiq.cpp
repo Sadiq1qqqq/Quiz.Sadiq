@@ -15,6 +15,7 @@ void readInput(char arr[], int maxLength) {
     arr[i] = '\0';
 }
 
+
 void createQuiz() {
     if (qCount >= 100) {
         cout << "Sual limitinə çatılıb!" << endl;
