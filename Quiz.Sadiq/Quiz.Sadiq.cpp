@@ -109,6 +109,8 @@ void guestQuiz() {
         cout << i + 1 << ". " << questions[i] << endl;
     }
 
+
+
     int idx;
     cout << "Cavablandırmaq istədiyiniz sualın nömrəsini daxil edin: ";
     cin >> idx;
