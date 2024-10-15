@@ -32,6 +32,7 @@ void createQuiz() {
     qCount++;
 }
 
+
 void viewQuiz() {
     if (qCount == 0) {
         cout << "Heç bir quiz yoxdur!" << endl;
