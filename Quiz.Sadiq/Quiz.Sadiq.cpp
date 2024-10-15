@@ -98,6 +98,7 @@ void deleteQuiz() {
 }
 
 
+
 void guestQuiz() {
     if (qCount == 0) {
         cout << "Heç bir quiz yoxdur!" << endl;
