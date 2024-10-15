@@ -121,6 +121,7 @@ void guestQuiz() {
         readInput(userAnswer, 256);
 
 
+
         int correct = 1;
         for (int i = 0; i < 256; i++) {
             if (userAnswer[i] != answers[idx - 1][i]) {
