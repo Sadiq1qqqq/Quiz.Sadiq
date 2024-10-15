@@ -77,6 +77,7 @@ void deleteQuiz() {
 
     viewQuiz();
 
+    
     int idx;
     cout << "Silmək istədiyiniz sualın nömrəsini daxil edin: ";
     cin >> idx;
