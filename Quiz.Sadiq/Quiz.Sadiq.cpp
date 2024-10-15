@@ -44,6 +44,7 @@ void viewQuiz() {
     }
 }
 
+
 void editQuiz() {
     if (qCount == 0) {
         cout << "Heç bir quiz yoxdur!" << endl;
